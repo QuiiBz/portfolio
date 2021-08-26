@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useRef } from 'react'
-import { Terminal as XTerminal } from 'xterm'
 import { WebglAddon } from 'xterm-addon-webgl'
 import 'xterm/css/xterm.css'
 import useFit from '../hooks/useFit'
@@ -7,7 +6,7 @@ import useResize from '../hooks/useResize'
 import useTerminal from '../hooks/useTerminal'
 
 const Terminal: FC = () => {
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
   const { fit, fitAddon } = useFit()
   const terminal = useTerminal()
 
