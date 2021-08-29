@@ -1,48 +1,45 @@
-import { useMemo } from "react";
-import { Terminal } from "xterm";
+import { useMemo } from 'react';
+import { Terminal } from 'xterm';
 
-const PROMPT = 'tom $ '
+const PROMPT = 'tom $ ';
 
 const useTerminal = (): Terminal => {
   return useMemo(() => {
     const terminal = new Terminal({
       fontSize: 18,
-    })
+    });
 
-    const prompt = () => terminal.write(`\r\n${PROMPT}`)
+    let cmd = '';
+
+    const prompt = () => terminal.write(`\r\n${PROMPT}`);
 
     const enter = (clear: boolean) => {
-      if (clear)
-        terminal.clear();
+      if (clear) terminal.clear();
 
-      cmd = ''
+      cmd = '';
       prompt();
-    }
+    };
 
-    prompt()
-
-    let cmd = ''
+    prompt();
 
     terminal.onKey(({ key, domEvent }) => {
-      const printable = (
-        !domEvent.altKey && !domEvent.ctrlKey && !domEvent.metaKey
-      );
-      const { keyCode } = domEvent
+      const printable = !domEvent.altKey && !domEvent.ctrlKey && !domEvent.metaKey;
+      const { keyCode } = domEvent;
 
-      if (keyCode == 13) {
-        enter(cmd == 'clear')
-      } else if (keyCode == 8) {
+      if (keyCode === 13) {
+        enter(cmd === 'clear');
+      } else if (keyCode === 8) {
         terminal.write('\b \b');
       } else if (printable) {
-        cmd += key
+        cmd += key;
         terminal.write(key);
-      } else if (domEvent.ctrlKey && keyCode == 76) {
-        enter(true)
+      } else if (domEvent.ctrlKey && keyCode === 76) {
+        enter(true);
       }
-    })
+    });
 
-    return terminal
-  }, [])
-}
+    return terminal;
+  }, []);
+};
 
-export default useTerminal
+export default useTerminal;
