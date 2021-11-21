@@ -1,13 +1,13 @@
-import { FC, ReactNode } from "react";
-import Head from 'next/head'
-import Header from "../components/Header";
-import { darkTheme, styled } from "../stitches.config";
+import { FC, ReactNode } from 'react';
+import Head from 'next/head';
+import Header from '../components/Header';
+import { darkTheme, styled } from '../stitches.config';
 
 const StyledBackground = styled('div', {
   width: '100vw',
   height: '100vh',
   backgroundColor: '$extraLight',
-})
+});
 
 const StyledContainer = styled('div', {
   width: '100vw',
@@ -16,25 +16,25 @@ const StyledContainer = styled('div', {
   top: 0,
   left: 0,
   zIndex: 1,
-})
+});
 
 const StyledCircle = styled('div', {
   position: 'absolute',
-  width: '25vw',
-  height: '25vw',
+  width: '30vw',
+  height: '30vw',
   borderRadius: '50%',
   opacity: 0.08,
   filter: 'blur(100px)',
   variants: {
     color: {
       green: {
-        top: '20%',
+        top: '15%',
         left: '45%',
         backgroundColor: 'greenyellow',
       },
       purple: {
         top: '40%',
-        left: '25%',
+        left: '20%',
         backgroundColor: 'purple',
         [`.${darkTheme} &`]: {
           opacity: '0.2',
@@ -43,11 +43,11 @@ const StyledCircle = styled('div', {
       red: {
         top: '45%',
         left: '50%',
-        backgroundColor: 'red',
+        backgroundColor: '$red',
       },
-    }
-  }
-})
+    },
+  },
+});
 
 const StyledLayout = styled('main', {
   width: '100vw',
@@ -67,14 +67,14 @@ const StyledLayout = styled('main', {
     padding: '4px',
     position: 'relative',
     zIndex: '99',
-  }
-})
+  },
+});
 
 export const DEFAULT_TITLE = 'Tom Lienard';
 
 interface Props {
-  title?: string
-  children: ReactNode
+  title?: string;
+  children: ReactNode;
 }
 
 const Layout: FC<Props> = ({ title, children }: Props) => {
@@ -95,16 +95,14 @@ const Layout: FC<Props> = ({ title, children }: Props) => {
         </div>
         <div />
         <div />
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
         <div />
         <div />
         <div />
         <div />
       </StyledLayout>
     </StyledBackground>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

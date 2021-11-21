@@ -1,8 +1,9 @@
-import { GetStaticProps } from "next";
-import { FC } from "react";
-import Title from "../components/Title";
-import Layout from "../layouts/Layout";
-import Col from "../components/Col";
+import { GetStaticProps } from 'next';
+import { FC } from 'react';
+import Title from '../components/Title';
+import Layout from '../layouts/Layout';
+import Col from '../components/Col';
+import Typography from '../components/Typography';
 
 interface Repo {
   owner: string;
@@ -14,36 +15,35 @@ interface Repo {
 }
 
 interface Props {
-  repos: Repo[]
+  repos: Repo[];
 }
 
-const Projects: FC<Props> = ({ repos }) => {
+const Projects: FC<Props> = () => {
   return (
-    <Layout title='projects'>
+    <Layout title="projects">
       <Col>
         <Title>projects</Title>
-        <Col>
-        {
-          repos.map(repo => (
+        {/*<Col>
+          {repos.map(repo => (
             <RepoCards key={repo.repo} user={repo.owner} repos={[repo.repo]} />
-          ))
-        }
-        </Col>
+          ))}
+        </Col>*/}
+        <Typography css={{ marginTop: '16px' }}>Coming soon!</Typography>
       </Col>
     </Layout>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const response = await fetch('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=QuiiBz')
-  const repos = await response.json() as Repo[]
+  const response = await fetch('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=QuiiBz');
+  const repos = (await response.json()) as Repo[];
 
   return {
     props: {
       repos,
     },
-    revalidate: 60
+    revalidate: 60,
   };
-}
+};
 
-export default Projects
+export default Projects;

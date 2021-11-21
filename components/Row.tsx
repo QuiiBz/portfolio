@@ -1,4 +1,4 @@
-import { styled } from "../stitches.config"
+import { styled } from '../stitches.config';
 
 const Row = styled('div', {
   display: 'flex',
@@ -6,25 +6,25 @@ const Row = styled('div', {
   variants: {
     justify: {
       center: {
-        justifyContent: 'center'
+        justifyContent: 'center',
       },
       between: {
-        justifyContent: 'space-between'
-      }
+        justifyContent: 'space-between',
+      },
     },
     align: {
       center: {
-        alignItems: 'center'
+        alignItems: 'center',
       },
       end: {
-        alignItems: 'flex-end'
-      }
-    }
+        alignItems: 'flex-end',
+      },
+    },
   },
   defaultVariants: {
     justify: 'center',
-    align: 'center'
-  }
-})
+    align: 'center',
+  },
+});
 
-export default Row
+export default Row;

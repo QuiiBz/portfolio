@@ -1,8 +1,9 @@
-import type { AppProps } from 'next/app'
-import { FC } from 'react'
-import { darkTheme, globalCss } from '../stitches.config'
-import { ThemeProvider  } from 'next-themes'
-import CursorProvider from '../lib/CursorContext'
+import type { AppProps } from 'next/app';
+import { FC } from 'react';
+import { darkTheme, globalCss, theme } from '../stitches.config';
+import { ThemeProvider } from 'next-themes';
+import CursorProvider from '../lib/CursorContext';
+import { rgba } from 'polished';
 
 const globalStyles = globalCss({
   '@import': "url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap')",
@@ -18,22 +19,20 @@ const globalStyles = globalCss({
     transition: 'background .3s, color .3s  ',
   },
   '*::selection': {
-    background: 'rgba(79, 5, 153, 0.8)',
+    background: rgba(theme.colors.red.value, 0.3),
     color: '$light',
   },
-  'a': {
+  a: {
     color: 'inherit',
     textDecoration: 'none',
   },
-  "@dark": {
-    ":root:not(.light)": {
+  '@dark': {
+    ':root:not(.light)': {
       ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
         // @ts-ignore
         const currentColor = darkTheme.colors[currentColorKey];
         const currentColorValue =
-          currentColor.value.substring(0, 1) === "$"
-            ? `$colors${currentColor.value}`
-            : currentColor.value;
+          currentColor.value.substring(0, 1) === '$' ? `$colors${currentColor.value}` : currentColor.value;
 
         return {
           [currentColor.variable]: currentColorValue,
@@ -42,10 +41,10 @@ const globalStyles = globalCss({
       }, {}),
     },
   },
-})
+});
 
 const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
-  globalStyles()
+  globalStyles();
 
   return (
     <ThemeProvider
@@ -53,14 +52,14 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
       defaultTheme="system"
       value={{
         dark: darkTheme.className,
-        light: "light",
+        light: 'light',
       }}
     >
       <CursorProvider>
         <Component {...pageProps} />
       </CursorProvider>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default App;

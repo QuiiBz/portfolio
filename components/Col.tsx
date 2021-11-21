@@ -1,4 +1,4 @@
-import { styled } from "../stitches.config"
+import { styled } from '../stitches.config';
 
 const Col = styled('div', {
   display: 'flex',
@@ -6,16 +6,21 @@ const Col = styled('div', {
   variants: {
     justify: {
       center: {
-        justifyContent: 'center'
+        justifyContent: 'center',
       },
       between: {
-        justifyContent: 'space-between'
-      }
-    }
+        justifyContent: 'space-between',
+      },
+    },
+    align: {
+      center: {
+        alignItems: 'center',
+      },
+    },
   },
   defaultVariants: {
-    justify: 'center'
-  }
-})
+    justify: 'center',
+  },
+});
 
-export default Col
+export default Col;

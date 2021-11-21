@@ -2,6 +2,7 @@ import React from 'react';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import { getCssText } from '../stitches.config';
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export default class Document extends NextDocument {
   render() {
     return (
