@@ -9,6 +9,7 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+          <script defer data-domain="particule.vercel.app" src="/js/script.js" />
         </Head>
         <body>
           <Main />
