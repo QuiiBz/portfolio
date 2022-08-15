@@ -52,7 +52,7 @@ body {
 
 		.subtitle {
 			font-size: 16px;
-			color: #24211D;
+			color: #776F68;
 			margin: 8px 0 0;
 			font-weight: normal;
 		}
@@ -75,7 +75,7 @@ body {
 		transition: .3s ease;
 
 		&.active {
-			color: #24211D;
+			color: #191511;
 		}
 	}
 }
@@ -100,8 +100,38 @@ body {
 	}
 
 	p {
-		color: #24211D;
+		color: #776F68;
 		font-size: 16px;
 		margin: 16px 0 0;
+
+		a {
+			position: relative;
+			text-decoration: none;
+			color: #191511;
+			clip-path: inset(-2px -2px -2px -2px);
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				width: 100%;
+				height: 100%;
+				padding: 2px;
+				border-radius: 2px;
+				z-index: -1;
+				transition: .15s ease;
+				transform: translateY(100%);
+			}
+
+			&:hover {
+				color: #FFF7F0;
+
+				&::before {
+					transform: translateY(0);
+					background-color: #191511;
+				}
+			}
+		}
 	}
 }
