@@ -20,6 +20,11 @@ body {
 	box-sizing: border-box;
 }
 
+::selection {
+  color: #FFF7F0;
+  background: #191511;
+}
+
 .noise {
 	position: absolute;
 	top: 0;
@@ -73,6 +78,27 @@ body {
 		color: #776F68;
 		text-decoration: none;
 		transition: .3s ease;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 50%;
+			top: 32px;
+			transform: translate(-50%, 8px);
+			border-radius: 99999%;
+			width: 6px;
+			height: 6px;
+			transition: .15s ease-in-out;
+		}
+
+		&:hover, &.active {
+			&::after {
+				transform: translate(-50%, 0);
+				background-color: #191511;
+			}
+		}
 
 		&.active {
 			color: #191511;
