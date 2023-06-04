@@ -9,7 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.5",
+    "@lagon/astro": "^0.3.0",
+    "astro": "^2.5.7",
     "sass": "^1.52.2"
   }
 }
