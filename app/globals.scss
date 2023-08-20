@@ -3,6 +3,7 @@
   --dark: #191511;
   --gray: #776f68;
   --border: #473f38;
+  --accent: #9f0af5;
 }
 
 body {
@@ -273,22 +274,36 @@ body {
       border-color: var(--border);
     }
 
-    h2 {
-      color: var(--dark);
-      font-size: 18px;
-      font-weight: normal;
-      margin: 0 0 8px;
+    .title-container {
       display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
       gap: 8px;
+        margin: 0 0 8px;
 
-      svg {
-        color: var(--gray);
-        display: block;
+      h2 {
+        color: var(--dark);
+        font-size: 18px;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
 
-        &:hover {
-          color: var(--dark);
+        svg {
+          color: var(--gray);
+          display: block;
+
+          &:hover {
+            color: var(--dark);
+          }
         }
+      }
+
+      .contributor-badge {
+        font-size: 12px;
+        color: var(--accent);
       }
     }
 

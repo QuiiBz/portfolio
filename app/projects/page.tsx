@@ -1,12 +1,10 @@
-'use client'
-
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
-import { useState } from "react"
 
-// export const metadata = {
-//   title: '/projects',
-// }
+export const metadata = {
+  title: '/projects',
+  description: 'Projects I\'ve worked on',
+}
 
 type Project = {
   name: string
@@ -14,9 +12,10 @@ type Project = {
   url?: string
   github: string
   deprecated?: boolean
+  contributor?: boolean
 }
 
-const OWN_PROJECTS: Project[] = [
+const PROJECTS: Project[] = [
   {
     name: 'Lagon',
     description: 'Serverless JavaScript Runtime and platform in Rust',
@@ -39,6 +38,28 @@ const OWN_PROJECTS: Project[] = [
     name: 'tsfuck',
     description: 'Brainfuck interpreter using TypeScript types',
     github: 'QuiiBz/tsfuck'
+  },
+  {
+    name: 'Million',
+    description: 'Virtual DOM Replacement for React',
+    url: 'https://million.dev',
+    github: 'aidenybai/million',
+    contributor: true,
+  },
+  {
+    name: 'UnJS',
+    description: 'Unified JavaScript Tools',
+    url: 'https://unjs.io',
+    github: 'unjs',
+    contributor: true,
+  },
+  {
+    name: 'tRPC',
+    description: 'End-to-end typesafe APIs',
+    url: 'https://trpc.io',
+    github: 'trpc/trpc',
+    deprecated: true,
+    contributor: true,
   },
   {
     name: 'dotfiles',
@@ -72,47 +93,39 @@ const OWN_PROJECTS: Project[] = [
   },
 ]
 
-const CONTRIBUTED_PROJECTS: Project[] = [
-  {
-    name: 'Million',
-    description: '',
-    url: 'https://million.dev',
-    github: 'aidenybai/million',
-  },
-  {
-    name: 'UnJS',
-    description: '',
-    url: 'https://unjs.io',
-    github: 'unjs',
-  },
-  {
-    name: 'tRPC',
-    description: '',
-    url: 'https://trpc.io',
-    github: 'trpc/trpc',
-    deprecated: true,
-  },
-]
-
 const getGitHubLink = (project: Project) => `https://github.com/${project.github}`
 const getMainLink = (project: Project) => project.url || getGitHubLink(project)
 
-export default function Projects() {
-  const [view, setView] = useState<'created' | 'contributed'>('created')
-  const projects = view === 'created' ? OWN_PROJECTS : CONTRIBUTED_PROJECTS
+function ProjectCard({ project }: { project: Project }) {
+  const mainLink = getMainLink(project)
+  const gitHubLink = getGitHubLink(project)
+  const showGitHub = gitHubLink !== mainLink
 
   return (
-    <div className="projects">
-      {projects.map(project => (
-        <Link href={getMainLink(project)} target="_blank" className={`project ${project.deprecated ? 'deprecated' : ''}`} key={project.name}>
-          <h2>
-            {project.name}
-            <Link href={getGitHubLink(project)} target="_blank">
+    <Link href={mainLink} target="_blank" className={`project ${project.deprecated ? 'deprecated' : ''}`} key={project.name}>
+      <div className="title-container">
+        <h2>
+          {project.name}
+          {showGitHub ? (
+            <Link href={gitHubLink} target="_blank">
               <GitHubLogoIcon />
             </Link>
-          </h2>
-          <p>{project.description}</p>
-        </Link>
+          ) : null}
+        </h2>
+        {project.contributor ? (
+          <span className="contributor-badge">contributor</span>
+        ) : null}
+      </div>
+      <p>{project.description}</p>
+    </Link>
+  )
+}
+
+export default function Projects() {
+  return (
+    <div className="projects">
+      {PROJECTS.map(project => (
+        <ProjectCard project={project} key={project.name} />
       ))}
     </div>
   )
