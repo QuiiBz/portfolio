@@ -3,21 +3,20 @@ export const metadata = {
   description: 'My personal website'
 }
 
+const TOM = 'tom'.split('')
+const LIENARD = 'lienard'.split('')
+
 export default function Home() {
   return (
     <div className="container">
       <h1 className="title">
-        <span>t</span>
-        <span>o</span>
-        <span>m</span>
+        {TOM.map((letter, index) => (
+          <span style={{ animationDelay: `${(index + 2) / 10}s` }} key={`${letter}-${index}`}>{letter}</span>
+        ))}
         <br />
-        <span>l</span>
-        <span>i</span>
-        <span>e</span>
-        <span>n</span>
-        <span>a</span>
-        <span>r</span>
-        <span>d</span>
+        {LIENARD.map((letter, index) => (
+          <span style={{ animationDelay: `${(index + 4) / 10}s` }} key={`${letter}-${index}`}>{letter}</span>
+        ))}
       </h1>
       <h2 className="subtitle">crafting softwares with cool tech</h2>
     </div>

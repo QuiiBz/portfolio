@@ -96,13 +96,18 @@ const PROJECTS: Project[] = [
 const getGitHubLink = (project: Project) => `https://github.com/${project.github}`
 const getMainLink = (project: Project) => project.url || getGitHubLink(project)
 
-function ProjectCard({ project }: { project: Project }) {
+type ProjectCardProps = {
+  project: Project
+  animationDelay: string
+}
+
+function ProjectCard({ animationDelay, project }: ProjectCardProps) {
   const mainLink = getMainLink(project)
   const gitHubLink = getGitHubLink(project)
   const showGitHub = gitHubLink !== mainLink
 
   return (
-    <Link href={mainLink} target="_blank" className={`project ${project.deprecated ? 'deprecated' : ''}`} key={project.name}>
+    <Link href={mainLink} target="_blank" className={`project ${project.deprecated ? 'deprecated' : ''}`} style={{ animationDelay }}>
       <div className="title-container">
         <h2>
           {project.name}
@@ -124,8 +129,8 @@ function ProjectCard({ project }: { project: Project }) {
 export default function Projects() {
   return (
     <div className="projects">
-      {PROJECTS.map(project => (
-        <ProjectCard project={project} key={project.name} />
+      {PROJECTS.map((project, index) => (
+        <ProjectCard project={project} animationDelay={`${((index + 2) / 10)}s`} key={project.name} />
       ))}
     </div>
   )
