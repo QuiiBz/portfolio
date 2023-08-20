@@ -1,16 +1,26 @@
 {
-  "name": "@example/portfolio",
-  "version": "0.0.1",
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@lagon/astro": "^0.3.0",
-    "astro": "^2.5.7",
-    "sass": "^1.52.2"
+    "sass": "^1.66.1"
   }
 }
