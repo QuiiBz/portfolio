@@ -12,7 +12,7 @@ type Project = {
   url?: string
   github: string
   deprecated?: boolean
-  contributor?: boolean
+  note?: string
 }
 
 const PROJECTS: Project[] = [
@@ -44,14 +44,14 @@ const PROJECTS: Project[] = [
     description: 'Virtual DOM Replacement for React',
     url: 'https://million.dev',
     github: 'aidenybai/million',
-    contributor: true,
+    note: 'contributor'
   },
   {
     name: 'UnJS',
     description: 'Unified JavaScript Tools',
     url: 'https://unjs.io',
     github: 'unjs',
-    contributor: true,
+    note: 'contributor'
   },
   {
     name: 'tRPC',
@@ -59,7 +59,7 @@ const PROJECTS: Project[] = [
     url: 'https://trpc.io',
     github: 'trpc/trpc',
     deprecated: true,
-    contributor: true,
+    note: 'contributor'
   },
   {
     name: 'dotfiles',
@@ -117,8 +117,8 @@ function ProjectCard({ animationDelay, project }: ProjectCardProps) {
             </Link>
           ) : null}
         </h2>
-        {project.contributor ? (
-          <span className="contributor-badge">contributor</span>
+        {project.note ? (
+          <span className="contributor-badge">{project.note}</span>
         ) : null}
       </div>
       <p>{project.description}</p>

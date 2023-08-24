@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <nav className="bottom-nav">
       <Link className={getLinkStyle('/')} href="/">/home</Link>
-      <Link className={getLinkStyle('/about')} href="/about">/about</Link>
+      {/* <Link className={getLinkStyle('/about')} href="/about">/about</Link> */}
       <Link className={getLinkStyle('/projects')} href="/projects">/projects</Link>
     </nav>
   )
