@@ -1,6 +1,3 @@
-import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import Link from "next/link"
-
 export const metadata = {
   title: '/about',
   description: 'About me, myself and I'

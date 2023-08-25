@@ -39,7 +39,7 @@ export default function Home() {
         enjoys Cloud, Open Source, playing Piano
       </p>
       <p className="subtitle map" style={{ animationDelay: '1.2s' }}>lives in 🇫🇷 Paris
-        <span className="background noise-background">
+        <span className="background">
           <img src="/paris.jpg" alt="Map of Paris" />
         </span>
       </p>
