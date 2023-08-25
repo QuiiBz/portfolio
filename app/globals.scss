@@ -76,7 +76,7 @@ body {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 204px;
+        width: 202px;
         max-width: max-content;
 
         &:hover {
@@ -114,8 +114,9 @@ body {
         position: absolute;
         flex-direction: column;
         top: 10px;
-        right: -200px;
-        padding-left: 40px;
+        right: -240px;
+        padding-left: 30px;
+        padding-bottom: 14px;
         pointer-events: none;
         cursor: default;
         transition: .3s ease;
@@ -130,13 +131,14 @@ body {
             font-size: 14px;
             content: attr(data-desc);
             position: absolute;
-            top: 14px;
+            top: 16px;
             left: 0;
           }
 
           a {
             text-decoration: none;
             color: var(--gray);
+            transition: .3s ease;
 
             &::after {
               content: ' ↗';
