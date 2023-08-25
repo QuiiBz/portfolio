@@ -38,7 +38,11 @@ export default function Home() {
       <p className="subtitle hidden" style={{ animationDelay: '1.1s' }}>
         enjoys Cloud, Open Source, playing Piano
       </p>
-      <p className="subtitle" style={{ animationDelay: '1.2s' }}>lives in 🇫🇷 Paris</p>
+      <p className="subtitle map" style={{ animationDelay: '1.2s' }}>lives in 🇫🇷 Paris
+        <span className="background noise-background">
+          <img src="/paris.jpg" alt="Map of Paris" />
+        </span>
+      </p>
       <p className="subtitle socials" style={{ animationDelay: '1.3s' }}>
         <Link href="https://github.com/QuiiBz" target="_blank">
           <GitHubLogoIcon />

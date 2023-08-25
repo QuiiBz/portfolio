@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={gilda.className}>
-        <div className="noise" />
+        <div className="noise noise-background" />
         <section className="bordered-section">
           {children}
         </section>
