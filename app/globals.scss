@@ -67,10 +67,22 @@ body {
       font-weight: normal;
       opacity: 0;
       transform: translateY(8px);
-      animation: 1s ease 1.2s forwards fadeUp;
+      animation: 1s ease 1s forwards fadeUp;
       transition: .3s ease;
       position: relative;
       width: max-content;
+
+      &.hidden {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 204px;
+        max-width: max-content;
+
+        &:hover {
+          width: 400px;
+        }
+      }
 
       &.socials {
         display: flex;
@@ -112,7 +124,7 @@ body {
         .exp {
           display: block;
           color: var(--gray);
-        position: relative;
+          position: relative;
 
           &::after {
             font-size: 14px;

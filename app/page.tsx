@@ -28,7 +28,9 @@ export default function Home() {
           <span className="exp" data-desc="Engine & open-source">2021 ⸺ <Link href="https://fig.io" target="_blank">Fig</Link></span>
         </span>
       </p>
-      <p className="subtitle" style={{ animationDelay: '1.1s' }}>enjoys Cloud and Open-Source</p>
+      <p className="subtitle hidden" style={{ animationDelay: '1.1s' }}>
+        enjoys Cloud, Open Source, playing Piano
+      </p>
       <p className="subtitle" style={{ animationDelay: '1.2s' }}>lives in 🇫🇷 Paris</p>
       <p className="subtitle socials" style={{ animationDelay: '1.3s' }}>
         <Link href="https://github.com/QuiiBz" target="_blank">

@@ -18,7 +18,7 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     name: 'Lagon',
-    description: 'Serverless JavaScript Runtime and platform in Rust',
+    description: 'JavaScript Runtime for Edge Functions in Rust',
     url: 'https://lagon.app',
     github: 'lagonapp/lagon',
   },
