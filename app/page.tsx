@@ -24,8 +24,12 @@ export default function Home() {
       <p className="subtitle" style={{ animationDelay: '1s' }}>
         crafting softwares at <img src="/scaleway.png" alt="Scaleway logo" className="icon" /> Scaleway
         <span className="prev">
-          <span className="exp" data-desc="Frontend developer">2021 ⸺ <Link href="https://scaleway.com" target="_blank">Scaleway</Link></span>
-          <span className="exp" data-desc="Engine & open-source">2021 ⸺ <Link href="https://fig.io" target="_blank">Fig</Link></span>
+          <span className="exp" data-desc="Frontend developer">
+            2021 ⸺ <img src="/scaleway.png" alt="Scaleway logo" className="icon" /> <Link href="https://scaleway.com" target="_blank">Scaleway</Link>
+          </span>
+          <span className="exp" data-desc="Engine & open-source">
+            2021 ⸺ <img src="/fig.webp" alt="Fig.io logo" className="icon" /> <Link href="https://fig.io" target="_blank">Fig</Link>
+          </span>
         </span>
       </p>
       <p className="subtitle hidden" style={{ animationDelay: '1.1s' }}>
