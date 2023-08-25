@@ -45,10 +45,11 @@ body {
     transform: translate(-50%, -50%);
 
     .title {
+      margin: 0 0 18px;
+
       span {
         font-size: 96px;
         color: var(--dark);
-        margin: 0;
         line-height: 86px;
         font-weight: normal;
         display: inline-block;
@@ -71,9 +72,28 @@ body {
       position: relative;
       width: max-content;
 
+      &.socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+
+        a {
+          color: var(--gray);
+          text-decoration: none;
+          transition: .3s ease;
+          cursor: alias;
+
+          &:hover {
+            color: var(--dark);
+          }
+        }
+      }
+
       .icon {
         height: 12px;
         width: auto;
+        transition: .3s ease;
       }
 
       .prev {
@@ -100,7 +120,6 @@ body {
             position: absolute;
             top: 14px;
             left: 0;
-            // left: 70px;
           }
 
           a {
@@ -130,12 +149,22 @@ body {
     }
   }
 
-  .container:has(.subtitle:hover):hover > .subtitle {
+  .container:has(.subtitle:hover):hover > .subtitle,
+  .container:has(.subtitle:hover):hover > .subtitle.socials a {
     color: var(--grayer);
   }
 
-  .container .subtitle:hover {
+  .container:has(.subtitle:hover):hover > .subtitle .icon {
+    opacity: 0.4;
+  }
+
+  .container .subtitle:hover,
+  .container .subtitle.socials:hover a {
     color: var(--dark) !important;
+  }
+
+  .container .subtitle:hover .icon {
+    opacity: 1 !important;
   }
 }
 
