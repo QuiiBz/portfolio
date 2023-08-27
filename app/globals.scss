@@ -377,3 +377,26 @@ body {
   }
 }
 
+@media (max-width:768px) {
+  .subtitle.map .background {
+    display: none;
+  }
+
+  .subtitle .prev {
+    top: 140px !important;
+    right: -40px !important;
+  }
+
+  .projects {
+    width: 80vw;
+    height: 80vh;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: hidden;
+  }
+  
+  .bottom-nav {
+    bottom: 5%;
+  }
+}
+
