@@ -279,6 +279,24 @@ body {
     pointer-events: none;
   }
 
+  .project-container {
+    position: relative;
+    opacity: 0;
+    animation: 0.8s ease 0s forwards fadeUp;
+
+    .github-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      color: var(--gray);
+      display: block;
+
+      &:hover {
+        color: var(--dark);
+      }
+    }
+  }
+
   .project {
     display: flex;
     flex-direction: column;
@@ -290,8 +308,6 @@ body {
     text-decoration: none;
     border-color: transparent;
     transition: 0.3s ease;
-    opacity: 0;
-    animation: 0.8s ease 0s forwards fadeUp;
 
     &.deprecated {
       h2, p, span {
@@ -307,10 +323,9 @@ body {
     .title-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
       gap: 8px;
-        margin: 0 0 8px;
+      margin: 0 0 8px;
 
       h2 {
         color: var(--dark);
@@ -320,15 +335,6 @@ body {
         align-items: center;
         gap: 8px;
         margin: 0;
-
-        svg {
-          color: var(--gray);
-          display: block;
-
-          &:hover {
-            color: var(--dark);
-          }
-        }
       }
 
       .contributor-badge {
@@ -394,9 +400,8 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     overflow-x: hidden;
   }
-  
+
   .bottom-nav {
     bottom: 5%;
   }
 }
-
