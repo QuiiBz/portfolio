@@ -1,23 +1,25 @@
-# build output
-dist/
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
-# dependencies
-node_modules/
+# Node dependencies
+node_modules
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Logs
+logs
+*.log
 
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
+# Misc
 .DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
 .vercel
-.lagon
-.next
-out
