@@ -25,17 +25,24 @@ const PROJECTS: Project[] = [
     github: "QuiiBz/tsfuck",
   },
   {
-    name: "Million",
-    description: "Virtual DOM Replacement for React",
-    url: "https://million.dev",
-    github: "aidenybai/million",
-    note: "contributor",
+    name: "Typehero",
+    description: 'Learn TypeScript by doing challenges',
+    url: 'https://typehero.dev',
+    github: 'typehero/typehero',
+    note: 'contributor',
   },
   {
     name: "UnJS",
     description: "Unified JavaScript Tools",
     url: "https://unjs.io",
     github: "unjs",
+    note: "contributor",
+  },
+  {
+    name: "Million",
+    description: "Virtual DOM Replacement for React",
+    url: "https://million.dev",
+    github: "aidenybai/million",
     note: "contributor",
   },
   {
@@ -78,12 +85,8 @@ const PROJECTS: Project[] = [
   },
 ];
 
-export default defineCachedEventHandler(
+export default defineEventHandler(
   () => {
     return PROJECTS;
   },
-  {
-    swr: true,
-    maxAge: 60 * 60 * 24 * 7,
-  }
 );

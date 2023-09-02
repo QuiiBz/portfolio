@@ -275,8 +275,9 @@ body {
     height: 60px;
     background: linear-gradient(360deg, var(--light), transparent);
     bottom: 0;
-    left: -100%;
+    left: 0;
     pointer-events: none;
+    transform: translateX(-35%);
   }
 
   .project-container {
