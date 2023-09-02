@@ -48,13 +48,14 @@ body {
     .title {
       margin: 0 0 18px;
 
+      font-size: 96px;
+      color: var(--dark);
+      line-height: 86px;
+      font-weight: normal;
+
       span {
-        font-size: 96px;
-        color: var(--dark);
-        line-height: 86px;
-        font-weight: normal;
-        display: inline-block;
         opacity: 0;
+        display: inline-block;
         animation: 1s ease 0s forwards title;
       }
     }
