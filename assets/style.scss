@@ -288,7 +288,7 @@ body {
 
     .github-icon {
       position: absolute;
-      top: 16px;
+      top: 18px;
       right: 16px;
       color: var(--gray);
       display: block;
@@ -401,6 +401,10 @@ body {
     gap: 16px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     overflow-x: hidden;
+
+    .contributor-badge {
+      display: none;
+    }
   }
 
   .bottom-nav {
