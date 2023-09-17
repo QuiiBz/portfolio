@@ -10,7 +10,7 @@ Deployed at [https://tom.lnrd.fr](https://tom.lnrd.fr).
 
 ## Sponsors
 
-![Sponsors](https://github.com/QuiiBz/next-international/blob/main/assets/sponsors.svg)
+![Sponsors](https://github.com/QuiiBz/dotfiles/blob/main/sponsors.png?raw=true)
 
 ## License
 
