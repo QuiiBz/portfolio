@@ -14,6 +14,11 @@ const PROJECTS: Project[] = [
     github: "QuiiBz/next-international",
   },
   {
+    name: "Sherif",
+    description: "Opinionated, zero-config linter for JavaScript monorepos",
+    github: "QuiiBz/sherif",
+  },
+  {
     name: "myip.dev",
     description: "Minimalist IP and network information tool",
     url: "https://myip.dev",
