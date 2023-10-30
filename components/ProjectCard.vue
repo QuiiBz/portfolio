@@ -3,11 +3,11 @@
     <NuxtLink :href="mainLink" target="_blank" :class="{ deprecated: project.deprecated }" class="project">
       <div class="title-container">
         <h2>
-          {{project.name}}
+          {{ project.name }}
         </h2>
-        <span v-if="project.note" class="contributor-badge">{{project.note}}</span>
+        <span v-if="project.note" class="contributor-badge">{{ project.note }}</span>
       </div>
-      <p>{{project.description}}</p>
+      <p>{{ project.description }}</p>
     </NuxtLink>
     <NuxtLink v-if="showGitHub" :href="gitHubLink" target="_blank" class="github-icon">
       <GitHubLogoIcon />
