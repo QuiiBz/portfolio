@@ -1,21 +1,24 @@
 <template>
   <div class="container">
     <h1 class="title">
-      <span v-for="(letter, index) in TOM" :style="{ animationDelay: `${(index + 2) / 10}s`}">{{letter}}</span>
+      <span v-for="(letter, index) in TOM" :style="{ animationDelay: `${(index + 2) / 10}s` }">{{ letter }}</span>
       <br />
-      <span v-for="(letter, index) in LIENARD" :style="{ animationDelay: `${(index + 4) / 10}s` }">{{letter}}</span>
+      <span v-for="(letter, index) in LIENARD" :style="{ animationDelay: `${(index + 4) / 10}s` }">{{ letter }}</span>
     </h1>
     <p class="subtitle" :style="{ animationDelay: '1s' }">
       crafting softwares at <img src="/scaleway.png" alt="Scaleway logo" class="icon" /> Scaleway
       <span class="prev">
         <span class="exp" data-desc="Founder">
-          2022-now ⸺ <img src="/lagon.png" alt="Lagon.app logo" class="icon" /> <NuxtLink href="https://lagon.app" target="_blank">Lagon</NuxtLink>
+          2022-2023 ⸺ <img src="/lagon.png" alt="Lagon.app logo" class="icon" />
+          <NuxtLink href="https://lagon.app" target="_blank">Lagon</NuxtLink>
         </span>
         <span class="exp" data-desc="Frontend developer">
-          2021-now ⸺ <img src="/scaleway.png" alt="Scaleway logo" class="icon" /> <NuxtLink href="https://scaleway.com" target="_blank">Scaleway</NuxtLink>
+          2021-2023 ⸺ <img src="/scaleway.png" alt="Scaleway logo" class="icon" />
+          <NuxtLink href="https://scaleway.com" target="_blank">Scaleway</NuxtLink>
         </span>
-        <span class="exp" data-desc="Engine & open-source">
-          2021-22&nbsp;&nbsp;&nbsp;&nbsp;&#8201;⸺ <img src="/fig.webp" alt="Fig.io logo" class="icon" /> <NuxtLink href="https://fig.io" target="_blank">Fig</NuxtLink>
+        <span class="exp" data-desc="Freelance Software Engineer">
+          2021-2022 ⸺ <img src="/fig.webp" alt="Fig.io logo" class="icon" />
+          <NuxtLink href="https://fig.io" target="_blank">Fig</NuxtLink>
         </span>
       </span>
     </p>

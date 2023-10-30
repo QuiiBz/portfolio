@@ -3,7 +3,7 @@
     <h1 class="title">
       <span v-for="(letter, index) in USES" :style="{ animationDelay: `${(index + 2) / 10}s` }">{{ letter }}</span>
     </h1>
-    <p class="subtitle" :style="{ animationDelay: '0.3s' }">
+    <p class="subtitle hidden" :style="{ animationDelay: '0.3s' }">
       Arc Browser, Raycast, Rectangle Pro, OrbStack
     </p>
     <p class="subtitle hidden" :style="{ animationDelay: '0.4s' }">
