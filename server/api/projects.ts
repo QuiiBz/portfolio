@@ -6,6 +6,7 @@ const PROJECTS: Project[] = [
     description: "JavaScript Runtime for Edge Functions in Rust",
     url: "https://lagon.app",
     github: "lagonapp/lagon",
+    note: 'acquired by Vercel',
   },
   {
     name: "next-international",
