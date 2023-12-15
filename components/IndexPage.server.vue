@@ -9,7 +9,7 @@
       crafting softwares at <img src="/vercel.png" alt="Vercel logo" class="icon" /> Vercel
       <span class="prev">
         <span class="exp" data-desc="Software Engineer">
-          2022-now &nbsp;⸺ <img src="/vercel.png" alt="Vercel logo" class="icon" /> 
+          2023-now &nbsp;⸺ <img src="/vercel.png" alt="Vercel logo" class="icon" /> 
           <NuxtLink href="https://vercel.com" target="_blank">Vercel</NuxtLink>
         </span>
         <span class="exp" data-desc="Founder (acquired by Vercel)">
