@@ -4,9 +4,12 @@
     <NuxtPage />
   </section>
   <Footer />
+  <SpeedInsights />
 </template>
 
 <script setup>
+import { SpeedInsights } from '@vercel/speed-insights/vue';
+
 useHead({
   htmlAttrs: {
     lang: 'en'
