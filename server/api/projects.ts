@@ -6,13 +6,19 @@ const PROJECTS: Project[] = [
     description: "JavaScript Runtime for Edge Functions in Rust",
     url: "https://lagon.app",
     github: "lagonapp/lagon",
-    note: 'acquired by Vercel',
+    note: "acquired by Vercel",
   },
   {
     name: "next-international",
     description: "Type-safe internationalization (i18n) for Next.js",
     url: "https://next-international.vercel.app",
     github: "QuiiBz/next-international",
+  },
+  {
+    name: "OG Studio",
+    description: "Figma-like OG (Open Graph) Image builder",
+    url: "https://ogstudio.app",
+    github: "QuiiBz/ogstudio",
   },
   {
     name: "Sherif",
@@ -26,16 +32,11 @@ const PROJECTS: Project[] = [
     github: "QuiiBz/myip.dev",
   },
   {
-    name: "tsfuck",
-    description: "Brainfuck interpreter using TypeScript types",
-    github: "QuiiBz/tsfuck",
-  },
-  {
     name: "Typehero",
-    description: 'Learn TypeScript by doing challenges',
-    url: 'https://typehero.dev',
-    github: 'typehero/typehero',
-    note: 'contributor',
+    description: "Learn TypeScript by doing challenges",
+    url: "https://typehero.dev",
+    github: "typehero/typehero",
+    note: "contributor",
   },
   {
     name: "UnJS",
@@ -49,6 +50,7 @@ const PROJECTS: Project[] = [
     description: "Virtual DOM Replacement for React",
     url: "https://million.dev",
     github: "aidenybai/million",
+    deprecated: true,
     note: "contributor",
   },
   {
@@ -60,9 +62,20 @@ const PROJECTS: Project[] = [
     note: "contributor",
   },
   {
+    name: "tsfuck",
+    description: "Brainfuck interpreter using TypeScript types",
+    github: "QuiiBz/tsfuck",
+  },
+  {
     name: "dotfiles",
     description: "My personal dotfiles",
     github: "QuiiBz/dotfiles",
+  },
+  {
+    name: "portfolio",
+    description: "This very website",
+    url: "https://tom.lnrd.fr",
+    github: "QuiiBz/portfolio",
   },
   {
     name: "detect-runtime",
@@ -91,8 +104,6 @@ const PROJECTS: Project[] = [
   },
 ];
 
-export default defineEventHandler(
-  () => {
-    return PROJECTS;
-  },
-);
+export default defineEventHandler(() => {
+  return PROJECTS;
+});
