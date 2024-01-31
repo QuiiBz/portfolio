@@ -29,9 +29,9 @@
     <p class="subtitle hidden" :style="{ animationDelay: '1.1s' }">
       enjoys Cloud, Open Source, playing Piano
     </p>
-    <p class="subtitle map" :style="{ animationDelay: '1.2s' }">lives in 🇫🇷 Paris
+    <p class="subtitle map" :style="{ animationDelay: '1.2s' }">🇫🇷 living in 🇬🇧 London
       <span class="background">
-        <img src="/paris.jpg" alt="Map of Paris" />
+        <img src="/london.jpg" alt="Map of London" />
       </span>
     </p>
     <p class="subtitle socials" :style="{ animationDelay: '1.3s' }">
