@@ -4,8 +4,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: '/uses',
-  description: 'Softwares I use on a daily basis',
+  title: 'uses - tom lienard',
+  description: 'Tools and softwares I use on a daily basis.',
 })
 </script>
 

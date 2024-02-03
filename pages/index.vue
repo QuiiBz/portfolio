@@ -5,6 +5,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'tom lienard',
-  description: 'My personal website'
+  description: 'Tom Lienard\'s personal website, where you can learn more about him, his work experience and projects.'
 })
 </script>
