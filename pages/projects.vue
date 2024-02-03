@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: '/projects',
-  description: "Projects I've ve worked on or contributed to",
+  title: 'projects - tom lienard',
+  description: 'Projects I\'ve created or contributed to.',
 })
 </script>
