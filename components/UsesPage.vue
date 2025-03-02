@@ -4,13 +4,13 @@
       <span v-for="(letter, index) in USES" :style="{ animationDelay: `${(index + 2) / 10}s` }">{{ letter }}</span>
     </h1>
     <p class="subtitle hidden" :style="{ animationDelay: '0.3s' }">
-      Arc Browser, Raycast, Rectangle Pro, OrbStack
+      Zen, Raycast, Rectangle Pro, OrbStack
     </p>
     <p class="subtitle hidden" :style="{ animationDelay: '0.4s' }">
-      Alacritty, Jetbrains Mono, Catppuccin Macchiato
+      Ghostty, Jetbrains Mono, Catppuccin Macchiato
     </p>
     <p class="subtitle hidden" :style="{ animationDelay: '0.5s' }">
-      Neovim (or VS Code), tmux, lazygit, zsh
+      Neovim, tmux, lazygit, zsh
     </p>
   </div>
 </template>
