@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { Project } from '~/data';
+import type { Project } from "~/data";
 
 const props = defineProps<{
   project: Project
