@@ -9,13 +9,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "0.8.3",
-    "@nuxtjs/google-fonts": "3.0.2",
-    "nuxt": "3.7.1"
+    "@nuxt/devtools": "3.2.3",
+    "@nuxtjs/google-fonts": "3.2.0",
+    "nuxt": "4.4.2"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.1",
-    "@vercel/speed-insights": "^1.0.2",
-    "sass": "1.66.1"
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "sass": "1.98.0"
   }
 }
