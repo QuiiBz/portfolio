@@ -4,10 +4,10 @@
       <span v-for="(letter, index) in USES" :style="{ animationDelay: `${(index + 2) / 10}s` }">{{ letter }}</span>
     </h1>
     <p class="subtitle hidden" :style="{ animationDelay: '0.3s' }">
-      Brave, Aerospace, Raycast, Rectangle
+      Helium, Raycast, Aerospace, JankyBorders
     </p>
     <p class="subtitle hidden" :style="{ animationDelay: '0.4s' }">
-      Ghostty, Jetbrains Mono, Catppuccin Macchiato
+      Ghostty, Iosevka Term, Catppuccin Macchiato
     </p>
     <p class="subtitle hidden" :style="{ animationDelay: '0.5s' }">
       Neovim, tmux, lazygit, zsh, OrbStack
